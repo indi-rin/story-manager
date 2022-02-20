@@ -1,11 +1,13 @@
 import React from "react";
-import { Bar } from "./Navbar.style";
+import { Bar, Projects, Settings, Header } from "./Navbar.style";
 
 const Navbar = () => {
   return (
     <div>
-        <Bar>
-            <h3>Home</h3>
+      <Bar>
+        <Projects size={50} />
+        <Header>Story Manager</Header>
+        <Settings size={50} />
       </Bar>
     </div>
   );
