@@ -4,7 +4,12 @@ const User = require("./models/User");
 const Project = require("./models/Project");
 const Character = require("./models/Character");
 
-// associations here!
+// associations
+User.hasMany(Project);
+Project.belongsTo(User);
+
+Project.hasMany(Character);
+Character.belongsTo(Project);
 
 module.exports = {
   db,
