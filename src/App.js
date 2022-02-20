@@ -1,14 +1,13 @@
 import React from "react";
 import "./App.css";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar/Navbar";
+import RouteList from "./RouteList";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Home />
-      {/* ultimately routes go here */}
+      <RouteList />
     </div>
   );
 }
