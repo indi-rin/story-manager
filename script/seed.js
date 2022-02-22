@@ -1,5 +1,3 @@
-"use strict";
-
 const {
   db,
   models: { User, Project, Character },
@@ -12,10 +10,23 @@ const seed = async () => {
   console.log("DB synced!");
 
   // create users
+  const testUsers = await Promise.all([
+    User.create({ email: "test@email.com", password: "password" }),
+    User.create({ email: "user@email.com", password: "123" }),
+  ]);
 
   // create projects
 
   // associate projects to users
+
+  console.log(`Successfully seeded ${testUsers.length} users!`);
+
+  return {
+    users: {
+      test: testUsers[0],
+      user: testUsers[1],
+    },
+  };
 };
 
 // run seed separate function from seed function to isolate error-handling
