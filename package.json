@@ -31,12 +31,11 @@
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "http://localhost:8080/",
   "scripts": {
-    "build:dev": "npm run build -- --watch --mode=development",
+    "build": "react-scripts build",
     "seed": "node script/seed.js",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

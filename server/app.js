@@ -17,7 +17,7 @@ app.get("/", (req, res) =>
 );
 
 // static file-serving middleware
-app.use(express.static(path.join(+__dirname, "..", "public")));
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 // send 404 or remaining requests with an extension
 app.use((req, res, next) => {
