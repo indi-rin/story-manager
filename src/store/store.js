@@ -11,16 +11,16 @@ import allProjectsReducer from "./reducers/allProjects";
 import singleProjectReducer from "./reducers/singleProject";
 // import { composeWithDevTools } from "@reduxjs/toolkit/dist/devtoolsExtension";
 
-const reducer = combineReducers(); //imported reducers go here in {}
+const reducer = combineReducers(counterReducer); //imported reducers go here in {}
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({ collapsed: true }))
 );
-// const store = createStore(reducer, middleware);
+const store = createStore(reducer, middleware);
 
-const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
-});
+// const store = configureStore({
+//   reducer: {
+//     counter: counterReducer,
+//   },
+// });
 
 export default store;
