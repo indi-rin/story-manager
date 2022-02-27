@@ -9,9 +9,12 @@ import counterReducer from "../features/counter/counterSlice";
 import authReducer from "./reducers/auth";
 import allProjectsReducer from "./reducers/allProjects";
 import singleProjectReducer from "./reducers/singleProject";
+import usersReducer from "./reducers/users";
 // import { composeWithDevTools } from "@reduxjs/toolkit/dist/devtoolsExtension";
 
-const reducer = combineReducers(counterReducer); //imported reducers go here in {}
+const reducer = combineReducers({
+  users: usersReducer,
+}); //imported reducers go here in {}
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({ collapsed: true }))
 );
