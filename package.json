@@ -34,7 +34,7 @@
   "scripts": {
     "build": "react-scripts build",
     "seed": "node script/seed.js",
-    "start": "react-scripts start",
+    "start": "export PORT=8080 && react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
