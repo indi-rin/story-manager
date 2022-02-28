@@ -13,6 +13,7 @@ const _getUsers = (users) => {
 
 // thunks
 export const getUsers = () => {
+  // making it to the thunk but not the api GET
   return async (dispatch) => {
     try {
       const { data: users } = await axios.get("api/users");
